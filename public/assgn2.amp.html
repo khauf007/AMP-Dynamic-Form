@@ -1,0 +1,99 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <title>My AMP Page</title>
+  <link rel="canonical" href="self.html" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <meta name="amp-script-src" content="sha384-X8xW7VFd-a-kgeKjsR4wgFSUlffP7x8zpVmqC6lm2DPadWUnwfdCBJ2KbwQn6ADE sha384-nNFaDRiLzgQEgiC5kP28pgiJVfNLVuw-nP3VBV-e2s3fOh0grENnhllLfygAuU_M sha384-u7NPnrcs7p4vsbGLhlYHsId_iDJbcOWxmBd9bhVuPoA_gM_he4vyK6GsuvFvr2ym">
+  <style amp-custom>
+    h1 {
+      margin: 1rem;
+    }
+    .main-div{
+      text-align: center;
+    }
+    .sec-div{
+      text-align: center;
+    }
+    #remid{
+      text-align: center;
+      margin: auto;
+    }
+    .form-label{
+      font-size: 20px;
+      font-family: cursive;
+      font-weight: bold;
+      padding:20px;
+    }
+    .submit-btn{
+      padding: 20px;
+      width:100px;
+    }
+    .submit-btn:hover{
+      background-color: lightblue;
+    }
+    .add-text{
+        width: 100px;
+        padding: 20px;
+    }
+    .add-text:hover{
+      background-color: lightblue;
+    }
+    .rem-text{
+       width: 100px;
+        padding: 20px;
+    }
+    .rem-text:hover{
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-div">
+  <form method="post" action-xhr="#">
+    <label class="form-label">Name</label>
+    <input type="text" placeholder="Enter your name" id="name">
+    <br>
+    <br>
+    <label class="form-label">Gender</label>
+    <br>
+    <br>
+    <input type="radio" value="male" id="male">
+	 <label for="male" class="form-label">Male</label>
+    <input type="radio" value="female" id="female">
+	 <label for="female" class="form-label">Female</label>
+    <input type="radio" value="other" id="other">
+   <label for="other" class="form-label">Other</label>
+   <br>
+   <br>
+   <br>
+    <input type="submit" value="submit" class="submit-btn">
+  </form>
+  <br>
+  <br>
+  </div>
+  <div class="sec-div">
+  <amp-script layout="container"
+  src="http://localhost:8080/js/script.js"
+  class="amp-script-src"
+  sandbox="allow-forms">
+  <button id="addtext" class="add-text">
+     Add textfield
+    </button>
+    <button id="remtext" class="rem-text">
+      Remove textfield
+  </button>
+    <br>
+    <br>
+    <input type="text" id="remid" placeholder="Enter id of field to be removed" size="60"> 
+    <br>
+  <br>
+</amp-script>
+</div>
+  </body>
+</html>
