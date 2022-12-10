@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "amp-toolbox-cors": "^0.2.4",
-    "express": "4.16.4",
+    "express": "4.17.3",
     "nodemon": "^2.0.1"
   }
 }
